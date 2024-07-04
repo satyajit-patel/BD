@@ -30,6 +30,9 @@ app.post("/api/cars", (req, res) => {
 })
 // http -> body -> raw -> json
 
+
+
+
 // mongoose is the bridge between mongoDB and Node
 // npm i mongoose
 const mongoose = require("mongoose");
@@ -40,9 +43,6 @@ const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/myTable")
 .then(() => {
     console.log("Connection Successful");
-})
-.then(() => {
-    console.log('Document inserted, check MongoDB Compass now.');
 })
 .catch((err) => {
     // console.log(err);
